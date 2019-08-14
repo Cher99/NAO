@@ -1,0 +1,19 @@
+motion_id = keepSoft
+" keep the robot soft to get a new pose
+label start
+
+"   HY		HP
+"	LSP		LSR    	LEY    	LER		_LWY_	_LH_
+"	RSP		RSR    	REY    	RER  	_RWY_   _RH_
+"	LHYP    LHR    	LHP    	LKP    	LAP    	LAR
+"	RHYP    RHR    	RHP    	RKP    	RAP    	RAR
+"	Int  Dur
+stiffness * * 40 40 40 40 40 40 40 40 40 40 40 40 * * * 60 60 60 60 60 60 60 60 60 10
+
+-	- 		-	-	-	-	-	-		-	-	-	-	-	-		-	-	-	-	-	-		-	-	-	-	-	- 1 600000
+
+label repeat
+
+*   *       *    *     *    *     *     *       *    *    *     *    *    *       *     *   *     *     *   *    *     *    *     *    *    *   1  4000
+transition keepSoft keepSoft repeat
+transition allMotions extern start

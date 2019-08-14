@@ -1,0 +1,24 @@
+motion_id = keeperActionOld
+" holdon after stand
+label start
+
+"   HY		HP
+"	LSP		LSR    	LEY    	LER		_LWY_	_LH_
+"	RSP		RSR    	REY    	RER  	_RWY_   _RH_
+"	LHYP    LHR    	LHP    	LKP    	LAP    	LAR
+"	RHYP    RHR    	RHP    	RKP    	RAP    	RAR
+"	Int  Dur
+stiffness * * 40 40 40 40 40 40 40 40 40 40 40 40 * * * 60 60 60 60 60 60 60 60 60 10
+
+//0.2 30.2    18.5 -14.5 17.8 -0.6 -103.8 2.2     20.7 9.0 16.8 2.1 100.8 1.8    -20.3 -12.7 -92.5 124.0 -70.1 -0.4     -20.3 10.9 -91.8 123.6 -70.4 2.1 1 200
+
+*   *       *    *     *    *     *     *       *    *    *     *    *    *       *     *   *     *     *   *    *     *    *     *    *    *   1  500
+
+//*   *       33.2 -20.0 62.5 -31.6 -80.7 98.8    29.1 13.4 -65.6 38.7 85.9 4.8     -67.8 9.1 -87.4 45.3 65.2 -2.5 -67.8 -7.9 -86.8 42.9 65.5 4.7 1 1000
+*   *       33.2 -20.0 62.5 -31.6 -80.7 98.8    29.1 13.4 -65.6 38.7 85.9 4.8     -77.8 9.1 -87.4 45.3 65.2 -2.5 -77.8 -7.9 -86.8 42.9 65.5 4.7 1 1000
+
+label repeat
+
+*   *       *    *     *    *     *     *       *    *    *     *    *    *       *     *   *     *     *   *    *     *    *     *    *    *   1  4000
+transition keeperActionOld keeperActionOld repeat
+transition allMotions extern start
